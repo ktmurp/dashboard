@@ -43,8 +43,8 @@ function Class() {
     }, [])
 
     return (<div>
-        <Typography.Title level={4}>OVERVIEW</Typography.Title>
-        <Typography>Basic summary statistics of all puzzles combined.</Typography>
+        <Typography.Title level={4}>CLASS OVERVIEW</Typography.Title>
+        <Typography>Summary statistics about the whole class.</Typography>
         <Space>
         <DashboardCard icon={<UserOutlined />} title={"Total Users"} value={orders} />
         <DashboardCard icon={<ClockCircleOutlined />} title={"Total Minutes Spent"} value={customers} />
@@ -52,17 +52,17 @@ function Class() {
         <DashboardCard icon={<CheckCircleOutlined />} title={"Total Accuracy"} value={revenue} />
         </Space>    
         <Typography.Title level={4}>EVENT TRACKER</Typography.Title>
-        <Typography>The number of actions taken by each student.</Typography>
+        <Typography>The number of "events" done by each student, where an "event" in this puzzle is clicking a question or making a guess.</Typography>
         <Space>
         <EventTracker />
         </Space>
         <Typography.Title level={4}>ATTEMPTS TRACKER</Typography.Title>
-        <Typography>The number of correct and incorrect attempts taken by each student.</Typography>
+        <Typography>The number of correct and incorrect attempts taken by each student, where a correct "attempt" is a correct quadrilateral guess.</Typography>
         <Space>
         <AttemptsTracker />
         </Space>
         <Typography.Title level={4}>PERFECT COUNTER</Typography.Title>
-        <Typography>The number of puzzles completed perfectly on a student's first try.</Typography>
+        <Typography>The number of puzzles completed perfectly on a student's first try. *Student's names will go here instead of filler text</Typography>
         <Space>
         <PerfectCounter />
         </Space>
@@ -143,12 +143,12 @@ function AttemptsTracker() {
                 labels,
                 datasets: [
                   {
-                    label: 'Total Attempts',
+                    label: 'Correct Attempts',
                     data: data,
                     backgroundColor: "rgba(38, 34, 97, 255)",
                   },
                   {
-                    label: 'Completed Puzzles',
+                    label: 'Incorrect Attempts',
                     data: data,
                     backgroundColor: "rgba(40, 173, 203, 255)",
                   },

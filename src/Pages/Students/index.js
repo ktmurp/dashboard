@@ -15,10 +15,10 @@ function Students() {
     
     return (<div>
     <Space>
-    <Typography.Title level={4}>INDIVIDUAL STATS</Typography.Title>
+    <Typography.Title level={4}>INDIVIDUAL STUDENT STATS</Typography.Title>
     </Space>
     <br/>
-    <Typography.Text>Use the dropdowns to select a puzzle and sorting pattern.</Typography.Text>
+    <Typography.Text>Use the dropdowns to select a puzzle and sorting pattern. *Once the correct data is added, there will be the option to sort by ascending or descending order of any of the categories.</Typography.Text>
     <Table columns={[
         {
         title: "Name",

@@ -5,7 +5,6 @@ const getPuzzles = async () => {
         {
             method: "GET",
             headers: {
-                mode: 'no-cors',
             },
         }
     );

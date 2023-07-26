@@ -43,11 +43,11 @@ function Dashboards() {
     }, [])
 
     return (<div>
-        <Typography.Title level={4}>OVERVIEW</Typography.Title>
-        <Typography>Basic summary statistics of this game.</Typography>
+        <Typography.Title level={4}>QUADRILATERALS PUZZLE OVERVIEW</Typography.Title>
+        <Typography>Summary information about this particular puzzle including the standard that its module targeting.</Typography>
         <Space>
         <Card>
-          CCSS 3.G.1 Classifying quadrilaterals
+        HSG-GMD.B.4 Identify the shapes of 2D cross-sections of 3D objects.
         </Card>
         <DashboardCard icon={<UserOutlined />} title={"Users"} value={orders} />
         <DashboardCard icon={<ClockCircleOutlined />} title={"Minutes Spent"} value={customers} />
@@ -55,32 +55,32 @@ function Dashboards() {
         <DashboardCard icon={<CheckCircleOutlined />} title={"Overall Accuracy"} value={revenue} />
         </Space>
         <Typography.Title level={4}>SCENARIO COUNTER</Typography.Title>
-        <Typography>The number of each "scenario."</Typography>
+        <Typography>The number of each "scenario," which is the shape in this puzzle. *The X-axis will show Square, Rectangle, Kite, etc. instead of the filler labels</Typography>
         <Space>
         <ScenarioCounter />
         </Space>
         <Typography.Title level={4}>STUDENT SCENARIO COUNTER</Typography.Title>
-        <Typography>The number of each "scenario" encountered by each individual. Use the dropdown to select a student.</Typography>
+        <Typography>The number of each "scenario" encountered by each individual. Use the dropdown to select a student. *Again, the X-axis will be Square, Kite, ... There will be a dropdown once the real data is inputted</Typography>
         <Space>
         <StudentScenarioCounter />
         </Space>
         <Typography.Title level={4}>EVENTS COUNTER</Typography.Title>
-        <Typography>The number of actions taken by each student.</Typography>
+        <Typography>The number of "events" taken by each student.</Typography>
         <Space>
         <DashboardChart />
         </Space>
         <Typography.Title level={4}>TIME SPENT</Typography.Title>
-        <Typography>The average time per puzzle attempt.</Typography>
+        <Typography>Each student's average time per puzzle attempt.</Typography>
         <Space>
         <TimeChart />
         </Space>
         <Typography.Title level={4}>ATTEMPTS TRACKER</Typography.Title>
-        <Typography>The number of correct attempts and incorrect attempts. This metric is linked to persistence.</Typography>
+        <Typography>Each student's number of correct attempts and incorrect attempts.</Typography>
         <Space>
         <PersistenceChart />
         </Space>
         <Typography.Title level={4}>PERFECT COUNTER</Typography.Title>
-        <Typography>The number of puzzles completed perfectly on a student's first try.</Typography>
+        <Typography>The number of puzzles completed perfectly on a student's first try. *Names will be inputted here instead of dummy data</Typography>
         <Space>
         <RecentOrders />
         </Space>
