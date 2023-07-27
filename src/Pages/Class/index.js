@@ -46,10 +46,42 @@ function Class() {
         <Typography.Title level={4}>CLASS OVERVIEW</Typography.Title>
         <Typography>Summary statistics about the whole class.</Typography>
         <Space>
-        <DashboardCard icon={<UserOutlined />} title={"Total Users"} value={orders} />
-        <DashboardCard icon={<ClockCircleOutlined />} title={"Total Minutes Spent"} value={customers} />
-        <DashboardCard icon={<ThunderboltOutlined />} title={"Total Events"} value={events} />
-        <DashboardCard icon={<CheckCircleOutlined />} title={"Total Accuracy"} value={revenue} />
+        <DashboardCard icon={<UserOutlined 
+        style={{
+          color: "rgba(38, 34, 97, 255)",
+          backgroundColor: "rgba(224, 222, 255)",
+          borderRadius: 20,
+          fontSize: 24,
+          padding: 8,
+        }}
+        />} title={"Total Users"} value={orders} />
+        <DashboardCard icon={<ClockCircleOutlined 
+        style={{
+          color: "rgba(139, 132, 232, 255)",
+          backgroundColor: "rgba(219, 217, 252)",
+          borderRadius: 20,
+          fontSize: 24,
+          padding: 8,
+        }}
+        />} title={"Total Minutes Spent"} value={customers} />
+        <DashboardCard icon={<ThunderboltOutlined 
+        style={{
+          color: "rgba(78, 208, 237, 255)",
+          backgroundColor: "rgba(192, 241, 252)",
+          borderRadius: 20,
+          fontSize: 24,
+          padding: 8,
+        }}
+        />} title={"Total Events"} value={events} />
+        <DashboardCard icon={<CheckCircleOutlined 
+        style={{
+          color: "rgba(40, 173, 203, 255)",
+          backgroundColor: "rgba(192, 241, 252)",
+          borderRadius: 20,
+          fontSize: 24,
+          padding: 8,
+        }}
+        />} title={"Total Accuracy"} value={revenue} />
         </Space>    
         <Typography.Title level={4}>EVENT TRACKER</Typography.Title>
         <Typography>The number of "events" done by each student, where an "event" in this puzzle is clicking a question or making a guess.</Typography>
@@ -119,8 +151,11 @@ function EventTracker() {
         },
       };
 
-    return (<Card style={{width: 500, height: 275}}><Bar options={options} data={revenueData} /></Card>);
-
+      return (
+        <div className="chart-container">
+          <Bar options={options} data={revenueData} />
+        </div>
+      );
 }
 
 function AttemptsTracker() {
@@ -168,8 +203,11 @@ function AttemptsTracker() {
         },
       };
   
-    return (<Card style={{width: 500, height: 275}}><Bar options={options} data={revenueData} /></Card>);
-  
+      return (
+        <div className="chart-container">
+          <Bar options={options} data={revenueData} />
+        </div>
+      );  
   }
 
   function PerfectCounter(){

@@ -19,7 +19,8 @@ function Students() {
     </Space>
     <br/>
     <Typography.Text>Use the dropdowns to select a puzzle and sorting pattern. *Once the correct data is added, there will be the option to sort by ascending or descending order of any of the categories.</Typography.Text>
-    <Table columns={[
+    <Table 
+    columns={[
         {
         title: "Name",
         dataIndex: 'title',
@@ -54,6 +55,7 @@ function Students() {
         },
     ]}
     dataSource={dataSource}
+    className="alternate-row-colors"
     ></Table>
     </div>
     );

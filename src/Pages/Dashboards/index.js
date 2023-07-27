@@ -46,13 +46,45 @@ function Dashboards() {
         <Typography.Title level={4}>QUADRILATERALS PUZZLE OVERVIEW</Typography.Title>
         <Typography>Summary information about this particular puzzle including the standard that its module targeting.</Typography>
         <Space>
+        <DashboardCard icon={<UserOutlined 
+        style={{
+          color: "rgba(38, 34, 97, 255)",
+          backgroundColor: "rgba(224, 222, 255)",
+          borderRadius: 20,
+          fontSize: 24,
+          padding: 8,
+        }}
+        />} title={"Users"} value={orders} />
+        <DashboardCard icon={<ClockCircleOutlined 
+        style={{
+          color: "rgba(139, 132, 232, 255)",
+          backgroundColor: "rgba(219, 217, 252)",
+          borderRadius: 20,
+          fontSize: 24,
+          padding: 8,
+        }}
+        />} title={"Minutes Spent"} value={customers} />
+        <DashboardCard icon={<ThunderboltOutlined 
+        style={{
+          color: "rgba(78, 208, 237, 255)",
+          backgroundColor: "rgba(192, 241, 252)",
+          borderRadius: 20,
+          fontSize: 24,
+          padding: 8,
+        }}
+        />} title={"Events"} value={inventory} />
+        <DashboardCard icon={<CheckCircleOutlined 
+        style={{
+          color: "rgba(40, 173, 203, 255)",
+          backgroundColor: "rgba(192, 241, 252)",
+          borderRadius: 20,
+          fontSize: 24,
+          padding: 8,
+        }}
+        />} title={"Overall Accuracy"} value={revenue} />
         <Card>
         HSG-GMD.B.4 Identify the shapes of 2D cross-sections of 3D objects.
         </Card>
-        <DashboardCard icon={<UserOutlined />} title={"Users"} value={orders} />
-        <DashboardCard icon={<ClockCircleOutlined />} title={"Minutes Spent"} value={customers} />
-        <DashboardCard icon={<ThunderboltOutlined />} title={"Events"} value={inventory} />
-        <DashboardCard icon={<CheckCircleOutlined />} title={"Overall Accuracy"} value={revenue} />
         </Space>
         <Typography.Title level={4}>SCENARIO COUNTER</Typography.Title>
         <Typography>The number of each "scenario," which is the shape in this puzzle. *The X-axis will show Square, Rectangle, Kite, etc. instead of the filler labels</Typography>
@@ -137,8 +169,11 @@ function ScenarioCounter() {
       },
     };
 
-  return (<Card style={{width: 500, height: 275}}><Bar options={options} data={revenueData} /></Card>);
-
+    return (
+      <div className="chart-container">
+        <Bar options={options} data={revenueData} />
+      </div>
+    );
 }
 
 
@@ -182,8 +217,11 @@ function StudentScenarioCounter() {
       },
     };
 
-  return (<Card style={{width: 500, height: 275}}><Bar options={options} data={revenueData} /></Card>);
-
+    return (
+      <div className="chart-container">
+        <Bar options={options} data={revenueData} />
+      </div>
+    );
 }
 
 function DashboardChart() {
@@ -231,8 +269,12 @@ function DashboardChart() {
         },
       };
 
-    return (<Card style={{width: 500, height: 275}}><Bar options={options} data={revenueData} /></Card>);
-
+    //return (<Card style={{width: 500, height: 275}}><Bar options={options} data={revenueData} /></Card>);
+    return (
+      <div className="chart-container">
+        <Bar options={options} data={revenueData} />
+      </div>
+    );
 }
 
 function RecentOrders(){
@@ -309,8 +351,11 @@ function TimeChart() {
       },
     };
 
-  return (<Card style={{width: 500, height: 275}}><Bar options={options} data={revenueData} /></Card>);
-
+    return (
+      <div className="chart-container">
+        <Bar options={options} data={revenueData} />
+      </div>
+    );
 }
 
 function PersistenceChart() {
@@ -358,8 +403,11 @@ function PersistenceChart() {
       },
     };
 
-  return (<Card style={{width: 500, height: 275}}><Bar options={options} data={revenueData} /></Card>);
-
+    return (
+      <div className="chart-container">
+        <Bar options={options} data={revenueData} />
+      </div>
+    );
 }
 
 export default Dashboards;

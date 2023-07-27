@@ -34,3 +34,30 @@ border-top: 1px solid rgb(0, 0, 0, 0.5);
 .PageContent{
   padding-left: 12px;
 }
+
+.ant-table-tbody > tr:nth-child(odd) {
+  background-color: #f0f0f0; /* Change this color to your desired color for odd rows */
+}
+
+.ant-table-tbody > tr:nth-child(even) {
+  background-color: #ffffff; /* Change this color to your desired color for even rows */
+}
+
+.chart-container {
+  max-width: 100%;
+  width: 1000px; /* Set a default width for larger screens */
+}
+
+/* Adjust the width for medium-sized screens */
+@media screen and (max-width: 768px) {
+  .chart-container {
+    width: 80%; /* Example: 80% of available space for medium-sized screens */
+  }
+}
+
+/* Adjust the width for smaller screens */
+@media screen and (max-width: 480px) {
+  .chart-container {
+    width: 100%; /* Example: 100% of available space for smaller screens */
+  }
+}
